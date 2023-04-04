@@ -38,7 +38,7 @@ notesRouter.patch("/updated/:id", async (req, res) => {
   const id=req.params.id
   const note=await NoteModel.findOne({"_id":id})
   const userId_note=note.userId
-  const userID_making=req.body.userId;
+  const userID_making=req.body.userID;
   try{
     if(userID_making === userId_note){
       res.send({"msg":"You are not authorized"})
