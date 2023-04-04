@@ -9,5 +9,5 @@ const notesSchema = mongoose.Schema({
 
 const NoteModel = mongoose.model("note", notesSchema);
 
-module.exports = { NoteModel };
+module.exports = { NoteModel }; 
 
