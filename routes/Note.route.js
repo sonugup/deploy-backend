@@ -8,7 +8,6 @@ notesRouter.get("/", async (req, res) => {
  
   try {
     const notes = await NoteModel.find()
-    // res.send("notes")
   res.send(notes)
   console.log(notes)
   } catch (err) {
