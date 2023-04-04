@@ -5,7 +5,7 @@ const {NoteModel} = require("../model/Note.model");
 const notesRouter = express.Router();
 
 notesRouter.get("/", async (req, res) => {
-  // const data=req.body;
+ 
   try {
     const notes = await NoteModel.find()
     // res.send("notes")
