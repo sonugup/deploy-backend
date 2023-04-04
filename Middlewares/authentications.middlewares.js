@@ -5,7 +5,7 @@ const secretKey = process.env.key;
 const authenticate=(req, res, next) => {
     const token=req.headers.authorization || null
     if(token){
-        const decoded=jwt.verify(token,secretKey)
+        const decoded=jwt.verify(token, secretKey)
         if(decoded){
             const userID=decoded.userID
             console.log(decoded)
